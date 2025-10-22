@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER KEY | خدمات مفاتيح السيارات</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* Custom styles for the application */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #111;
+            color: #f0f0f0;
+        }
+        /* Style for the gold border effect */
+        .gold-border {
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 10px #FFD700;
+        }
+        
+        /* Animation for fade-in effect on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === تنسيقات Swiper.js === */
+        .swiper {
+            width: 100%;
+            height: 400px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+            padding-bottom: 40px; /* مساحة للنقاط بالأسفل */
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #222; /* لون خلفية احتياطي */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem; /* لجعل الصور بحواف دائرية */
+        }
+        /* تنسيق نقاط التنقل (Dots) */
+        .swiper-pagination-bullet {
+            background: #888;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: #FFD700; /* اللون الذهبي */
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 py-4 px-6 md:px-12 shadow-lg shadow-yellow-500/10">
+        <div class="container mx-auto flex justify-center items-center">
+            <h1 class="text-3xl font-bold tracking-widest text-yellow-400">
+                MASTER KEY
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="min-h-screen bg-cover bg-center flex items-center justify-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049596172.jpg');">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-4xl md:text-6xl font-black text-yellow-400 leading-tight mb-4 tracking-wide" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);">
+                    خبرة طويلة في أنظمة مفاتيح السيارات والبرمجة الذكية
+                </h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+                    نقدم خدمات احترافية لبرمجة المفاتيح والريموتات، ونظام البصمة لجميع الموديلات. نعمل بدقة، نصل بسرعة، ونحل أعقد المشكلات.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-bold mb-2 text-yellow-400 fade-in">خدماتنا الاحترافية</h3>
+                <p class="text-gray-400 mb-12 fade-in">نحن متخصصون في كل ما يتعلق بأمان سيارتك وتشغيلها.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
+                        <i class="fas fa-key text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">برمجة مفاتيح أصلية ومشفرة</h4>
+                        <p class="text-gray-400">لجميع أنواع وموديلات السيارات الحديثة والكلاسيكية.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
+                        <i class="fas fa-car-side text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">برمجة ريموتات سيارات</h4>
+                        <p class="text-gray-400">إعداد وبرمجة أحدث أنواع الريموتات الذكية.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
+                        <i class="fas fa-fingerprint text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">نظام البصمة الإلكترونية</h4>
+                        <p class="text-gray-400">تركيب وإعداد أنظمة التشغيل بالبصمة للمركبات.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
+                        <i class="fas fa-clone text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">نسخ مفاتيح نادرة ومفقودة</h4>
+                        <p class="text-gray-400">حلول متكاملة حتى في حالة فقدان جميع المفاتيح.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
+                        <i class="fas fa-lock-open text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">فتح أبواب السيارات المغلقة</h4>
+                        <p class="text-gray-400">بأحدث المعدات بدون أي خدش أو ضرر لسيارتك.</p>
+                    </div>
+                     <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
+                        <i class="fas fa-shield-alt text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-2xl font-bold mb-2">خدمة طوارئ</h4>
+                        <p class="text-gray-400">متواجدون لخدمتك على مدار الساعة في أي وقت.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-4 text-yellow-400 fade-in">معرض أعمالنا</h3>
+                <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto fade-in">خبرة طويلة في أنظمة مفاتيح السيارات والبرمجة الذكية خدمات احترافية لبرمجة المفاتيح الأصلية، الريموتات، ونظام البصمة لجميع الموديلات.</p>
+                
+                <div class="swiper mySwiper fade-in">
+                    <div class="swiper-wrapper">
+                        </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-bold mb-2 text-yellow-400 fade-in">موقعنا</h3>
+                <p class="text-gray-400 mb-12 fade-in">تفضل بزيارتنا في سوق الشيوخ، أو اتصل بنا لنصل إليك أينما كنت.</p>
+                <div class="w-full h-[500px] rounded-lg overflow-hidden gold-border fade-in">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q=30.8921875,46.4661875&hl=ar&z=17&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+         <section class="py-16 bg-black">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-gray-400 mb-8 fade-in">نخدم جميع أنواع السيارات</h3>
+                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-gray-500">
+                    <span class="font-bold text-xl fade-in">تويوتا</span>
+                    <span class="font-bold text-xl fade-in">كيا</span>
+                    <span class="font-bold text-xl fade-in">هيونداي</span>
+                    <span class="font-bold text-xl fade-in">جيب</span>
+                    <span class="font-bold text-xl fade-in">لكزس</span>
+                    <span class="font-bold text-xl fade-in">نيسان</span>
+                    <span class="font-bold text-xl fade-in">فورد</span>
+                    <span class="font-bold text-xl fade-in">شفروليه</span>
+                    <span class="font-bold text-xl fade-in">وغيرها</span>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-yellow-400">MASTER KEY</h3>
+            <p class="my-4">للتواصل وخدمات الطوارئ على مدار الساعة</p>
+            <div class="text-xl md:text-2xl font-bold space-x-4 rtl:space-x-reverse mb-6">
+                <a href="tel:07828937302" class="hover:text-yellow-400">07828937302</a>
+                <span>|</span>
+                <a href="tel:07800407759" class="hover:text-yellow-400">07800407759</a>
+            </div>
+            
+            <div class="flex justify-center items-center space-x-4 md:space-x-6 rtl:space-x-reverse mb-6">
+                <a href="https://wa.me/9647828937302" target="_blank" class="text-green-500 hover:text-green-400 transition-transform duration-300 hover:scale-110">
+                    <i class="fab fa-whatsapp text-4xl p-2 rounded-full gold-border bg-gray-900"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1H85vQoek9/" target="_blank" class="text-blue-500 hover:text-blue-400 transition-transform duration-300 hover:scale-110">
+                    <i class="fab fa-facebook text-4xl p-2 rounded-full gold-border bg-gray-900"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/27419wXGM7P9pzwQ9" target="_blank" class="text-red-500 hover:text-red-400 transition-transform duration-300 hover:scale-110">
+                    <i class="fas fa-map-marked-alt text-4xl p-2 rounded-full gold-border bg-gray-900"></i>
+                </a>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <p>© 2024 MASTER KEY. جميع الحقوق محفوظة.</p>
+                 <div class="flex justify-center mt-2 space-x-2 rtl:space-x-reverse text-sm text-gray-500">
+                    <span>#ريموت_سيارات</span>
+                    <span>#سوق_الشيوخ</span>
+                    <span>#مفاتيح_مشفره</span>
+                    <span>#خدمة_احترافية</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- كود تشغيل Swiper.js ---
+            const imageUrls = [
+                // الصور الأصلية
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049178877.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049184267.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049192669.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049200237.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049209834.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049509317.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049522613.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049543215.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049589704.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049596172.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049633995.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049640419.jpg',
+                'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049676736.jpg',
+                // === [تم التعديل] إضافة الصور الجديدة ===
+                'https://localcarkeynkeys.com/wp-content/uploads/2025/05/Car-key-extraction-in-LA-1024x512.jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5PNZgW_cTMMXVZSB3ANpndSHxuEkU1_D8j1GhACsEwfwUee2fZMpgR40&s=10',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGXTolL0vCLsb2FquCLZLDdSUmRHmgocjgJfqYZ6Lm3A&s=10',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS87HUMdX5qJQWQ1wFzgZBYaPBqeC9_gGppV7-56ysTLQ&s=10',
+                'https://smarttechlocksmiths.co.uk/wp-content/uploads/2024/05/PROGRAMMING-MY-EXISTING-KEYS-FOR-ANOTHER-CAR.jpg',
+                'https://www.locksmithkeyless.com/cdn/shop/articles/locksmithkeyless-347609-car-key-programming-blogbanner1.jpg?v=1731335152&width=1600',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFi1a5IVDndMMW5FRtnWAmkxEd9fnxFyXdF4MTpoy7BLCy7KlQ5mahIbaQ&s=10'
+            ];
+
+            const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+            // إضافة الصور إلى المعرض
+            if (swiperWrapper) {
+                imageUrls.forEach(url => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'صورة من أعمالنا';
+                    img.loading = 'lazy'; // تحسين الأداء
+                    img.onerror = () => { img.src = 'https://placehold.co/600x400/000000/FFD700?text=Image+Not+Found' };
+                    
+                    slide.appendChild(img);
+                    swiperWrapper.appendChild(slide);
+                });
+
+                // تهيئة Swiper
+                const swiper = new Swiper('.mySwiper', {
+                    speed: 1000, // سرعة الانتقال (للسلاسة)
+                    
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                        }
+                    },
+                    
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+
+                    grabCursor: true,
+                    loop: true,
+
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+
+            // --- كود إظهار العناصر عند التمرير ---
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.2,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
