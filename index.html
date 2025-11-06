@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!-- 
+  تم تحديث هذا الملف بالكامل لضمان الاتساق في القياسات والألوان،
+  وإضافة قسم "لماذا تختارنا" لجعله متكاملاً واحترافياً.
+-->
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTER KEY | خدمات مفاتيح السيارات</title>
+    <title>MASTER KEY | خدمات مفاتيح السيارات (تصميم احترافي متكامل)</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,19 +20,91 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
-        /* Custom styles for the application */
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #111;
+            background-color: #0a0518; 
             color: #f0f0f0;
-        }
-        /* Style for the gold border effect */
-        .gold-border {
-            border: 3px solid #FFD700;
-            box-shadow: 0 0 10px #FFD700;
+            overflow-x: hidden; 
         }
         
-        /* Animation for fade-in effect on scroll */
+        /* === [تعديل] كلاس الزجاج المصنفر (أصبح الآن كلاس أساسي) === */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .swiper {
+            width: 100%;
+            height: 400px; 
+            padding-bottom: 40px; 
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.75rem; /* 12px */
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.75rem; 
+        }
+        .swiper-pagination-bullet {
+            background: #888;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: #3b82f6; 
+        }
+
+        /* === [جديد] تحريك التدرج اللوني للنص === */
+        @keyframes slow-pulse-gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .animated-gradient-text {
+            background-size: 200% 200%;
+            animation: slow-pulse-gradient 5s ease-in-out infinite;
+        }
+
+        /* كلاسات التدرجات للخلفية (لا تغيير) */
+        .gradient-blob-1 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.4), rgba(139, 92, 246, 0.3));
+            filter: blur(150px);
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+            z-index: -10;
+            animation: pulse-blob 10s infinite alternate;
+        }
+        .gradient-blob-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(180deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.2));
+            filter: blur(120px);
+            border-radius: 50%;
+            bottom: 0;
+            right: -50px;
+            z-index: -10;
+            animation: pulse-blob 12s infinite alternate-reverse;
+        }
+        
+        @keyframes pulse-blob {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.2) translate(50px, -50px); }
+        }
+
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -38,121 +114,148 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* === تنسيقات Swiper.js === */
-        .swiper {
-            width: 100%;
-            height: 400px; /* يمكنك تعديل الارتفاع حسب الحاجة */
-            padding-bottom: 40px; /* مساحة للنقاط بالأسفل */
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #222; /* لون خلفية احتياطي */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 0.5rem; /* لجعل الصور بحواف دائرية */
-        }
-        /* تنسيق نقاط التنقل (Dots) */
-        .swiper-pagination-bullet {
-            background: #888;
-            opacity: 1;
-        }
-        .swiper-pagination-bullet-active {
-            background: #FFD700; /* اللون الذهبي */
-        }
     </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-[#0a0518] text-white antialiased relative">
 
-    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 py-4 px-6 md:px-12 shadow-lg shadow-yellow-500/10">
-        <div class="container mx-auto flex justify-center items-center">
-            <h1 class="text-3xl font-bold tracking-widest text-yellow-400">
+    <div class="gradient-blob-1"></div>
+    <div class="gradient-blob-2"></div>
+
+    <!-- === [تعديل] رأس الصفحة: إضافة ظل متسق === -->
+    <header class="glassmorphism sticky top-0 z-50 py-4 px-6 md:px-12 shadow-lg shadow-blue-500/5">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold tracking-widest text-white">
                 MASTER KEY
-            </h1>
+            </a>
+            <nav class="hidden md:flex space-x-6 rtl:space-x-reverse">
+                <a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors">الخدمات</a>
+                <a href="#features" class="text-gray-300 hover:text-blue-400 transition-colors">لماذا نحن؟</a>
+                <a href="#gallery" class="text-gray-300 hover:text-blue-400 transition-colors">المعرض</a>
+                <a href="#location" class="text-gray-300 hover:text-blue-400 transition-colors">الموقع</a>
+                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">تواصل معنا</a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="min-h-screen bg-cover bg-center flex items-center justify-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049596172.jpg');">
+        <!-- === [تعديل] القسم الرئيسي: زيادة الارتفاع وتطبيق أنيميشن للنص === -->
+        <section id="hero" class="min-h-[90vh] flex items-center justify-center text-center py-20">
             <div class="container mx-auto px-4 fade-in">
-                <h2 class="text-4xl md:text-6xl font-black text-yellow-400 leading-tight mb-4 tracking-wide" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);">
+                <h2 class="animated-gradient-text text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 leading-tight mb-4 tracking-wide">
                     خبرة طويلة في أنظمة مفاتيح السيارات والبرمجة الذكية
                 </h2>
-                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">
                     نقدم خدمات احترافية لبرمجة المفاتيح والريموتات، ونظام البصمة لجميع الموديلات. نعمل بدقة، نصل بسرعة، ونحل أعقد المشكلات.
                 </p>
+                <!-- [تعديل] تحسين ظل الزر -->
+                <a href="#contact" class="bg-blue-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30">
+                    اتصل بنا الآن
+                </a>
             </div>
         </section>
 
-        <section class="py-20 bg-gray-900">
+        <!-- === [تعديل] قسم الخدمات: توحيد المسافات وتحسين تأثير التمرير === -->
+        <section id="services" class="py-20">
             <div class="container mx-auto px-6 text-center">
-                <h3 class="text-4xl font-bold mb-2 text-yellow-400 fade-in">خدماتنا الاحترافية</h3>
-                <p class="text-gray-400 mb-12 fade-in">نحن متخصصون في كل ما يتعلق بأمان سيارتك وتشغيلها.</p>
+                <h3 class="text-4xl font-bold mb-4 text-blue-400 fade-in">خدماتنا الاحترافية</h3>
+                <p class="text-gray-300 mb-12 fade-in">نحن متخصصون في كل ما يتعلق بأمان سيارتك وتشغيلها.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
-                        <i class="fas fa-key text-5xl text-yellow-400 mb-4"></i>
-                        <h4 class="text-2xl font-bold mb-2">برمجة مفاتيح أصلية ومشفرة</h4>
-                        <p class="text-gray-400">لجميع أنواع وموديلات السيارات الحديثة والكلاسيكية.</p>
+                    
+                    <!-- [تعديل] بطاقة خدمة (نمط زجاجي محسن) -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-key text-5xl text-blue-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">برمجة مفاتيح أصلية ومشفرة</h4>
+                        <p class="text-gray-300">لجميع أنواع وموديلات السيارات الحديثة والكلاسيكية.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
-                        <i class="fas fa-car-side text-5xl text-yellow-400 mb-4"></i>
-                        <h4 class="text-2xl font-bold mb-2">برمجة ريموتات سيارات</h4>
-                        <p class="text-gray-400">إعداد وبرمجة أحدث أنواع الريموتات الذكية.</p>
+                    <!-- بطاقة 2 -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-car-side text-5xl text-blue-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">برمجة ريموتات سيارات</h4>
+                        <p class="text-gray-300">إعداد وبرمجة أحدث أنواع الريموتات الذكية.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
-                        <i class="fas fa-fingerprint text-5xl text-yellow-400 mb-4"></i>
-                        <h4 class="text-2xl font-bold mb-2">نظام البصمة الإلكترونية</h4>
-                        <p class="text-gray-400">تركيب وإعداد أنظمة التشغيل بالبصمة للمركبات.</p>
+                    <!-- بطاقة 3 -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-fingerprint text-5xl text-blue-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">نظام البصمة الإلكترونية</h4>
+                        <p class="text-gray-300">تركيب وإعداد أنظمة التشغيل بالبصمة للمركبات.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
-                        <i class="fas fa-clone text-5xl text-yellow-400 mb-4"></i>
-                        <h4 class="text-2xl font-bold mb-2">نسخ مفاتيح نادرة ومفقودة</h4>
-                        <p class="text-gray-400">حلول متكاملة حتى في حالة فقدان جميع المفاتيح.</p>
+                    <!-- بطاقة 4 -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-clone text-5xl text-blue-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">نسخ مفاتيح نادرة ومفقودة</h4>
+                        <p class="text-gray-300">حلول متكاملة حتى في حالة فقدان جميع المفاتيح.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
-                        <i class="fas fa-lock-open text-5xl text-yellow-400 mb-4"></i>
-                        <h4 class="text-2xl font-bold mb-2">فتح أبواب السيارات المغلقة</h4>
-                        <p class="text-gray-400">بأحدث المعدات بدون أي خدش أو ضرر لسيارتك.</p>
+                    <!-- بطاقة 5 -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-lock-open text-5xl text-blue-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">فتح أبواب السيارات المغلقة</h4>
+                        <p class="text-gray-300">بأحدث المعدات بدون أي خدش أو ضرر لسيارتك.</p>
                     </div>
-                     <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300 fade-in">
-                        <i class="fas fa-shield-alt text-5xl text-yellow-400 mb-4"></i>
-                        <h4 class="text-2xl font-bold mb-2">خدمة طوارئ</h4>
-                        <p class="text-gray-400">متواجدون لخدمتك على مدار الساعة في أي وقت.</p>
+                    <!-- بطاقة 6 -->
+                     <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-shield-alt text-5xl text-blue-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">خدمة طوارئ</h4>
+                        <p class="text-gray-300">متواجدون لخدمتك على مدار الساعة في أي وقت.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- === [جديد] قسم "لماذا تختارنا" لجعل الموقع متكاملاً === -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-bold mb-4 text-blue-400 fade-in">لماذا تختار MASTER KEY؟</h3>
+                <p class="text-gray-300 mb-12 fade-in max-w-2xl mx-auto">نحن نجمع بين الخبرة، السرعة، وأحدث التقنيات لنقدم لك خدمة لا مثيل لها.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- ميزة 1: الخبرة -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-cogs text-5xl text-purple-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">خبرة واسعة</h4>
+                        <p class="text-gray-300">سنوات من الخبرة في برمجة أعقد أنظمة المفاتيح والسيارات الحديثة.</p>
+                    </div>
+                    <!-- ميزة 2: السرعة -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-shipping-fast text-5xl text-purple-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">سرعة واستجابة</h4>
+                        <p class="text-gray-300">خدمة طوارئ سريعة ونصل إليك أينما كنت لفتح سيارتك أو برمجة مفتاحك.</p>
+                    </div>
+                    <!-- ميزة 3: التقنية -->
+                    <div class="glassmorphism p-8 rounded-xl shadow-lg transition-all duration-300 fade-in transform hover:-translate-y-2 hover:shadow-blue-500/20 hover:border-blue-500/30">
+                        <i class="fas fa-microchip text-5xl text-purple-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-2 text-white">أجهزة حديثة</h4>
+                        <p class="text-gray-300">نستخدم أحدث أجهزة البرمجة والقص لضمان دقة العمل بدون أي ضرر لسيارتك.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-black">
+        <!-- === [تعديل] قسم المعرض: توحيد المسافات === -->
+        <section id="gallery" class="py-20">
             <div class="container mx-auto px-6">
-                <h3 class="text-4xl font-bold text-center mb-4 text-yellow-400 fade-in">معرض أعمالنا</h3>
-                <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto fade-in">خبرة طويلة في أنظمة مفاتيح السيارات والبرمجة الذكية خدمات احترافية لبرمجة المفاتيح الأصلية، الريموتات، ونظام البصمة لجميع الموديلات.</p>
+                <h3 class="text-4xl font-bold text-center mb-4 text-blue-400 fade-in">معرض أعمالنا</h3>
+                <p class="text-gray-300 text-center mb-12 max-w-2xl mx-auto fade-in">شاهد بنفسك جودة ودقة عملنا في برمجة ونسخ مفاتيح مختلف أنواع السيارات.</p>
                 
                 <div class="swiper mySwiper fade-in">
                     <div class="swiper-wrapper">
-                        </div>
+                        <!-- سيتم ملء الصور هنا بواسطة JavaScript -->
+                    </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-gray-900">
+        <!-- === [تعديل] قسم الموقع: توحيد المسافات وتحسين الإطار === -->
+        <section id="location" class="py-20">
             <div class="container mx-auto px-6 text-center">
-                <h3 class="text-4xl font-bold mb-2 text-yellow-400 fade-in">موقعنا</h3>
-                <p class="text-gray-400 mb-12 fade-in">تفضل بزيارتنا في سوق الشيوخ، أو اتصل بنا لنصل إليك أينما كنت.</p>
-                <div class="w-full h-[500px] rounded-lg overflow-hidden gold-border fade-in">
+                <h3 class="text-4xl font-bold mb-4 text-blue-400 fade-in">موقعنا</h3>
+                <p class="text-gray-300 mb-12 fade-in">تفضل بزيارتنا في سوق الشيوخ، أو اتصل بنا لنصل إليك أينما كنت.</p>
+                <div class="w-full h-[500px] rounded-xl overflow-hidden glassmorphism p-2 fade-in shadow-lg transition-all duration-300 hover:shadow-blue-500/20 hover:border-blue-500/30">
                     <iframe
                         width="100%"
                         height="100%"
                         style="border:0;"
+                        class="rounded-lg"
                         loading="lazy"
                         allowfullscreen
                         referrerpolicy="no-referrer-when-downgrade"
@@ -162,50 +265,51 @@
             </div>
         </section>
         
-         <section class="py-16 bg-black">
+        <!-- === [تعديل] قسم الماركات: توحيد المسافات وتحسين الشارات === -->
+         <section class="py-20">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center text-gray-400 mb-8 fade-in">نخدم جميع أنواع السيارات</h3>
-                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-gray-500">
-                    <span class="font-bold text-xl fade-in">تويوتا</span>
-                    <span class="font-bold text-xl fade-in">كيا</span>
-                    <span class="font-bold text-xl fade-in">هيونداي</span>
-                    <span class="font-bold text-xl fade-in">جيب</span>
-                    <span class="font-bold text-xl fade-in">لكزس</span>
-                    <span class="font-bold text-xl fade-in">نيسان</span>
-                    <span class="font-bold text-xl fade-in">فورد</span>
-                    <span class="font-bold text-xl fade-in">شفروليه</span>
-                    <span class="font-bold text-xl fade-in">وغيرها</span>
+                <h3 class="text-3xl font-bold text-center text-white mb-12 fade-in">نتعامل مع جميع أنواع السيارات</h3>
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">تويوتا</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">كيا</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">هيونداي</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">جيب</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">لكزس</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">نيسان</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">فورد</span>
+                    <span class="glassmorphism rounded-full px-5 py-2 text-md font-medium text-gray-200 fade-in transition-all duration-300 hover:bg-white/20 hover:border-blue-500/50">شفروليه</span>
+                    <span class="bg-blue-500/10 border border-blue-500/50 rounded-full px-5 py-2 text-md font-medium text-blue-300 fade-in">وغيرها الكثير...</span>
                 </div>
             </div>
         </section>
 
-
     </main>
 
-    <footer class="bg-gray-900 text-white py-10">
+    <!-- === [تعديل] قسم التواصل: إضافة ظل === -->
+    <footer id="contact" class="glassmorphism text-white py-10 border-t-0 rounded-t-xl mt-20 shadow-lg">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold text-yellow-400">MASTER KEY</h3>
-            <p class="my-4">للتواصل وخدمات الطوارئ على مدار الساعة</p>
+            <h3 class="text-2xl font-bold text-blue-400">MASTER KEY</h3>
+            <p class="my-4 text-gray-200">للتواصل وخدمات الطوارئ على مدار الساعة</p>
             <div class="text-xl md:text-2xl font-bold space-x-4 rtl:space-x-reverse mb-6">
-                <a href="tel:07828937302" class="hover:text-yellow-400">07828937302</a>
-                <span>|</span>
-                <a href="tel:07800407759" class="hover:text-yellow-400">07800407759</a>
+                <a href="tel:07828937302" class="hover:text-blue-400 transition-all duration-300 hover:scale-105 inline-block">07828937302</a>
+                <span class="text-gray-600">|</span>
+                <a href="tel:07800407759" class="hover:text-blue-400 transition-all duration-300 hover:scale-105 inline-block">07800407759</a>
             </div>
             
             <div class="flex justify-center items-center space-x-4 md:space-x-6 rtl:space-x-reverse mb-6">
-                <a href="https://wa.me/9647828937302" target="_blank" class="text-green-500 hover:text-green-400 transition-transform duration-300 hover:scale-110">
-                    <i class="fab fa-whatsapp text-4xl p-2 rounded-full gold-border bg-gray-900"></i>
+                <a href="https://wa.me/9647828937302" target="_blank" class="transition-transform duration-300 hover:scale-110">
+                    <i class="fab fa-whatsapp text-4xl p-3 rounded-full glassmorphism bg-white/10 text-green-500 hover:bg-white/20"></i>
                 </a>
-                <a href="https://www.facebook.com/share/1H85vQoek9/" target="_blank" class="text-blue-500 hover:text-blue-400 transition-transform duration-300 hover:scale-110">
-                    <i class="fab fa-facebook text-4xl p-2 rounded-full gold-border bg-gray-900"></i>
+                <a href="https://www.facebook.com/share/1H85vQoek9/" target="_blank" class="transition-transform duration-300 hover:scale-110">
+                    <i class="fab fa-facebook text-4xl p-3 rounded-full glassmorphism bg-white/10 text-blue-500 hover:bg-white/20"></i>
                 </a>
-                <a href="https://maps.app.goo.gl/27419wXGM7P9pzwQ9" target="_blank" class="text-red-500 hover:text-red-400 transition-transform duration-300 hover:scale-110">
-                    <i class="fas fa-map-marked-alt text-4xl p-2 rounded-full gold-border bg-gray-900"></i>
+                <a href="https://maps.app.goo.gl/27419wXGM7P9pzwQ9" target="_blank" class="transition-transform duration-300 hover:scale-110">
+                    <i class="fas fa-map-marked-alt text-4xl p-3 rounded-full glassmorphism bg-white/10 text-red-500 hover:bg-white/20"></i>
                 </a>
             </div>
 
-            <div class="border-t border-gray-700 pt-6 mt-6">
-                <p>© 2024 MASTER KEY. جميع الحقوق محفوظة.</p>
+            <div class="border-t border-white/10 pt-6 mt-6">
+                <p class="text-gray-400">© 2024 MASTER KEY. جميع الحقوق محفوظة.</p>
                  <div class="flex justify-center mt-2 space-x-2 rtl:space-x-reverse text-sm text-gray-500">
                     <span>#ريموت_سيارات</span>
                     <span>#سوق_الشيوخ</span>
@@ -223,7 +327,6 @@
             
             // --- كود تشغيل Swiper.js ---
             const imageUrls = [
-                // الصور الأصلية
                 'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049178877.jpg',
                 'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049184267.jpg',
                 'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049192669.jpg',
@@ -237,7 +340,6 @@
                 'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049633995.jpg',
                 'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049640419.jpg',
                 'https://raw.githubusercontent.com/iqsd2020-ctrl/Web/main/FB_IMG_1761049676736.jpg',
-                // === [تم التعديل] إضافة الصور الجديدة ===
                 'https://localcarkeynkeys.com/wp-content/uploads/2025/05/Car-key-extraction-in-LA-1024x512.jpg',
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5PNZgW_cTMMXVZSB3ANpndSHxuEkU1_D8j1GhACsEwfwUee2fZMpgR40&s=10',
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGXTolL0vCLsb2FquCLZLDdSUmRHmgocjgJfqYZ6Lm3A&s=10',
@@ -249,7 +351,6 @@
 
             const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-            // إضافة الصور إلى المعرض
             if (swiperWrapper) {
                 imageUrls.forEach(url => {
                     const slide = document.createElement('div');
@@ -258,43 +359,29 @@
                     const img = document.createElement('img');
                     img.src = url;
                     img.alt = 'صورة من أعمالنا';
-                    img.loading = 'lazy'; // تحسين الأداء
-                    img.onerror = () => { img.src = 'https://placehold.co/600x400/000000/FFD700?text=Image+Not+Found' };
+                    img.loading = 'lazy'; 
+                    img.onerror = () => { img.src = 'https://placehold.co/600x400/0a0518/3b82f6?text=Image+Not+Found' };
                     
                     slide.appendChild(img);
                     swiperWrapper.appendChild(slide);
                 });
 
-                // تهيئة Swiper
                 const swiper = new Swiper('.mySwiper', {
-                    speed: 1000, // سرعة الانتقال (للسلاسة)
-                    
+                    speed: 1000, 
                     slidesPerView: 1,
                     spaceBetween: 10,
                     breakpoints: {
-                        640: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 30,
-                        },
-                        1280: {
-                            slidesPerView: 4,
-                            spaceBetween: 30,
-                        }
+                        640: { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 3, spaceBetween: 30 },
+                        1280: { slidesPerView: 4, spaceBetween: 30 }
                     },
-                    
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
                         pauseOnMouseEnter: true,
                     },
-
                     grabCursor: true,
                     loop: true,
-
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true,
@@ -302,7 +389,7 @@
                 });
             }
 
-            // --- كود إظهار العناصر عند التمرير ---
+            // --- كود إظهار العناصر عند التمرير (لا تغيير) ---
             const faders = document.querySelectorAll('.fade-in');
             const appearOptions = {
                 threshold: 0.2,
@@ -327,3 +414,6 @@
     </script>
 </body>
 </html>
+
+
+
